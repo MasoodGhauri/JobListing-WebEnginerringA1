@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Job Listings</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=League+Spartan&display=swap"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  
+  <body>
+    <header></header>
+
+    <!-- Main Body Wrapper contains filter at first then item list building dynamically then details popup at first hidden and show on item click -->
+    <div id="bodyWrapper">
+      <div id="wrapper">
+        <div id="filterBar">
+          <div id="filters">
+            <div class="filter">
+              <span>Fullstack</span
+              ><button onclick="removeFilter(this)">&#10006;</button>
+            </div>
+            <div class="filter">
+              <span>Backend</span
+              ><button onclick="removeFilter(this)">&#10006;</button>
+            </div>
+            <div class="filter">
+              <span>Midweight</span
+              ><button onclick="removeFilter(this)">&#10006;</button>
+            </div>
+            <div class="filter">
+              <span>HTML</span
+              ><button onclick="removeFilter(this)">&#10006;</button>
+            </div>
+            <div class="filter">
+              <span>CSS</span
+              ><button onclick="removeFilter(this)">&#10006;</button>
+            </div>
+            <div class="filter">
+              <span>JavaScript</span
+              ><button onclick="removeFilter(this)">&#10006;</button>
+            </div>
+            <div class="filter">
+              <span>Sass</span
+              ><button onclick="removeFilter(this)">&#10006;</button>
+            </div>
+            <div class="filter">
+              <span>Ruby</span
+              ><button onclick="removeFilter(this)">&#10006;</button>
+            </div>
+            <div class="filter">
+              <span>React</span
+              ><button onclick="removeFilter(this)">&#10006;</button>
+            </div>
+            <div class="filter">
+              <span>RoR</span
+              ><button onclick="removeFilter(this)">&#10006;</button>
+            </div>
+            <div class="filter">
+              <span>Vue</span
+              ><button onclick="removeFilter(this)">&#10006;</button>
+            </div>
+            <div class="filter">
+              <span>Django</span
+              ><button onclick="removeFilter(this)">&#10006;</button>
+            </div>
+          </div>
+          <div id="clear">
+            <button onclick="clearAll()">Clear</button>
+          </div>
+        </div>
+
+        <div id="itemList"></div>
+
+        <div class="detailsWrapper">
+          <div class="detailsPopup">
+            <div class="detailsTop">
+              <div class="del">&#128465;</div>
+              <div class="close">&#10006;</div>
+            </div>
+            <div class="detailsBody"  id="0">
+                <h2>Job Titile</h2>
+                <h4>Intermediate Expertise</h4>
+                <div id="wrap">
+                  <div class="companyDesc">
+                    <img src="./images/eyecam-co.svg" alt="Comapny logo">
+                    <h3>Company Name</h3>
+                  </div>
+                  <div class="descLabels">
+                    <h6>Languages and Tools</h6>
+                    <div class="lab"></div>
+                  </div>
+                </div>
+                
+                <h6 class="location">Part Time - Remote</h6>
+                <h6 class="time">Posted 2 days ago</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- footer -->
+    <div class="attribution">
+      Challenge by
+      <a href="https://github.com/zaheersani" target="_blank"
+        >Prof. Zaheer Sani</a
+      >. Coded by
+      <a href="https://pk.linkedin.com/in/muhammad-masood-ghauri-b7b464261" target="_blank"
+        >Masood Ghauri</a
+      >.
+    </div>
+
+    <!-- button to add new job -->
+    <button type="button" id="popupBtn">&#43</button>
+
+    <!-- popup form for adding job -->
+    <div class="popupWrapper">
+      <div class="popup">
+        <div class="topForm">
+          <div class="closePopup">&#10006;</div>
+        </div>
+        <div class="jobForm">
+          <h2>Add new Job</h2>
+          <form action="">
+            <input type="text" id="positionName" placeholder="Position Name" required/>
+            <input type="text" id="companyName" placeholder="Company Name" required/>
+            <input type="text" id="companyLogoURL" placeholder="Company logo URL" required/>
+            <input type="text" id="contract" placeholder="Contract Type" required/>
+            <input type="text" id="level" placeholder="Level" required/>
+            <input type="text" id="languages" placeholder="Languages comma separated" required/>
+            <input type="text" id="tools" placeholder="Tools comma separated" required/>
+            <div id="featureWrapper">
+              <label for="featured">Featured</label>
+              <input type="checkbox" name="true" id="featured">
+            </div>
+            <button type="button" class="submitBtn">Add</button>
+          </form>          
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
