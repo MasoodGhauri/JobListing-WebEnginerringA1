@@ -10,4 +10,6 @@ Users can add a new job by clicking the plus button at the bottom right, a popup
 
 The bin icon button in the job details popup can delete a job
 
+Users can also filter jobs using filters at the top
+
  This code is responsive for every screen size
